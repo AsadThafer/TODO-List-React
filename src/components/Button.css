@@ -43,3 +43,9 @@ button:focus {
     background: #ff3217;
     border-color: #ff3217;
   }
+
+  .btn--add {
+    background: #6aff00;
+    color: white;
+    border-color: #6aff00;
+  }

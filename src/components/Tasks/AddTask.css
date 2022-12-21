@@ -1,0 +1,39 @@
+.startAddTask {
+    display: block;
+     font: inherit;
+     padding: 0.5rem 1rem;
+     background: #8c7ae6;
+     border: 1px solid #8c7ae6;
+     margin: auto;
+     margin-top: 10px;
+     text-align: center;
+     color: whitesmoke;
+     border-radius: 6px;
+     box-shadow: 0 1px 8px rgba(0, 0, 0, 0.26);
+     cursor: pointer;
+   }
+   
+   .startAddTask:hover,
+   .startAddTask:active {
+     background: #8c7ae6;
+     border-color: #8c7ae6;
+     color: whitesmoke;
+   }
+   
+   label {
+     font-weight: bold;
+     margin: 0.5rem 0;
+     color: #464646;
+   }
+   
+   input {
+     font: inherit;
+     border: 1px solid #ccc;
+     padding: 0.4rem 0.2rem;
+     color: #383838;
+   }
+   
+   input:focus {
+     outline: none;
+     background: #8c7ae667;
+   }
