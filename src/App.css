@@ -1,8 +1,6 @@
 
 
-button:focus {
-  outline: none;
-}
+
 
 
 #startAddTask {
@@ -45,48 +43,7 @@ input:focus {
   background: #8c7ae667;
 }
 
-.btn {
-  font: inherit;
-  padding: 0.5rem 1.5rem;
-  border: 1px solid #8c7ae6;
-  background: #8c7ae6;
-  color: white;
-  border-radius: 6px;
-  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.26);
-  cursor: pointer;
-  margin: 0 0.5rem;
-}
 
-.btn:hover,
-.btn:active {
-  background: #8c7ae6;
-  border-color: #8c7ae6;
-}
-
-.btn--passive {
-  color: #8c7ae6;
-  background: transparent;
-  border: none;
-  box-shadow: none;
-}
-
-.btn--passive:hover,
-.btn--passive:active {
-  background: #8c7ae62d;
-  color: black;
-}
-
-.btn--danger {
-  background: #d30808;
-  color: white;
-  border-color: #d30808;
-}
-
-.btn--danger:hover,
-.btn--danger:active {
-  background: #ff3217;
-  border-color: #ff3217;
-}
 
 .modal {
   position: fixed;
@@ -123,83 +80,7 @@ input:focus {
   justify-content: flex-end;
 }
 
-.Task-element {
-  margin: auto;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
-  border-radius: 10px;
-  margin-bottom: 10px;
-  background-color: white;
-  border: 4px solid #8c7ae6;
-}
-.Task-element.DONE{
-  background-color: lightgreen;
-}
 
-.Task-element h2,
-.Task-element p {
-  font-size: 1.25rem;
-  margin: 0;
-  padding-left: 0.5rem;
-}
-
-.Task-element h2 {
-  color: #383838;
-  margin-bottom: 1rem;
-}
-
-.Task-element p {
-  color: black;
-  display: inline;
-}
-
-.Task-element__info {
-  border-radius: 10px 0 0 10px;
-  overflow: hidden;
-  padding: 1rem;
-}
-
-.card {
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
-}
-.TODO-info{
-  text-align: right;
-  color: black;
-  width: 50%;
-  margin: auto;
-  color: whitesmoke;
-
-}
-
-.Task-Options{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem;
-  border-top: 1px solid #ccc;
-  
-}
-
-#entry-text {
-  width: 50%;
-  margin: 2rem auto;
-  max-width: 80%;
-  padding: 1rem;
-}
-
-#entry-text p {
-  font-size: 1.5rem;
-  text-align: center;
-}
-
-#Task-list {
-  list-style: none;
-  width: 40rem;
-  max-width: 90%;
-  margin: 1rem auto;
-  padding: 0;
-}
 
 #backdrop {
   position: fixed;
@@ -238,6 +119,13 @@ input:focus {
   width: 100%;
 }
 
+.Task-list {
+  list-style: none;
+  width: 40rem;
+  max-width: 90%;
+  margin: 1rem auto;
+  padding: 0;
+}
 
 .copyright {
   font-size: 0.8rem;
