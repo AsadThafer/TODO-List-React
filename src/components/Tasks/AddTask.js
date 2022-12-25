@@ -17,6 +17,7 @@ function AddTask(props) {
     };
 
 
+
     const TaskData = {
         id : Math.random().toString(),
         title: title,
@@ -31,6 +32,8 @@ function AddTask(props) {
         setTitle('');
         setAssignee('');
         setStatus('TO-DO');
+
+
     };
 
         
