@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 
 function TasksToggle(props) {
     const [FilterStatus, setFilteredStatus] = useState('');
-
     const handleStatusChange = (event) => {
         setFilteredStatus(event.target.value);
         props.onStatusChange(event.target.value);

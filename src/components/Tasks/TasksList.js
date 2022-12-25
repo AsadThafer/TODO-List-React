@@ -2,6 +2,7 @@ import Task from './Task.js';
 import TasksSearch from './TasksSearch.js';
 import React, { useState } from 'react';
 import TasksToggle from './TasksToggle.js';
+import TaskCount from './TaskCount.js';
 function TasksList(props) {
     const [searchTerm, setSearchTerm] = useState('');
     const [FilterStatus, setFilterStatus] = useState('TO-DO');
@@ -51,6 +52,7 @@ function TasksList(props) {
             />
         ))}
         </ul>
+        <TaskCount tasks={filteredTasksByStatus} />
         </div>
     );
     }
