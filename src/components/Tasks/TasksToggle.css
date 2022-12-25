@@ -1,0 +1,17 @@
+.TasksToggle{
+    text-align: center;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+
+.Statusinfo{
+    display: inline-block;
+    border-radius: 25px;
+    color: white ;
+
+    position: relative;
+    padding: 5px 10px;}
+

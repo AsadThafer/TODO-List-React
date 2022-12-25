@@ -17,8 +17,6 @@ function Task(props) {
         console.log(props.task);
     };
 
-
-
     const deleteTask = () => {
         console.log('Delete Task');
     };

@@ -11,6 +11,7 @@ function TasksSearch(props) {
 
     return (
         <div className='TasksSearch'>
+            <label className='Searchinfo' htmlFor='search'>Search for a task : </label>
             <input
                 type='text'
                 placeholder='Search for a task'

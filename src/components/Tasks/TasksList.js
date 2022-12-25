@@ -14,7 +14,6 @@ function TasksList(props) {
 
     const TasksToggleHandler = (FilterStatus) => {
         setFilterStatus(FilterStatus);
-        console.log(FilterStatus);
     };
 
     const filteredTasks = props.tasks.filter(task => {
