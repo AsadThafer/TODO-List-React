@@ -4,8 +4,7 @@ import Button from '../Button.js';
 
 function Task(props) {
     const [status, setStatus] = useState(props.status);
-    const [title, setTitle] = useState(props.title);
-    const [Assignee, setAssignee] = useState(props.Assignee);
+
     
     const updateStatus = () => {
         if (status === 'TO-DO') {
@@ -14,17 +13,22 @@ function Task(props) {
         setStatus('TO-DO');
         }
     };
+
+
+
+
+        
     
     return (
         <li className={`Task-element ${status}`}>
         <div className='Task-element__info'>
-            <h2>{title}</h2>
-            <p>{Assignee}</p>
+            <h2>{props.title}</h2>
+            <p>{props.Assignee}</p>
             <div  className='Task-Options'>
                 <Button className='btn btn--done' onClick={updateStatus}>
                 {status === 'TO-DO' ? 'Done ✔️' : 'Not Done ❌'}
                 </Button>
-                <Button className='btn btn--delete'>Delete 🗑️</Button>
+                <Button className='btn btn--delete' >Delete 🗑️</Button>
             </div>
 
         </div>
