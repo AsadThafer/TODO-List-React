@@ -13,12 +13,7 @@ function Task(props) {
         setStatus('TO-DO');
         }
     };
-
-
-
-
-        
-    
+   
     return (
         <li className={`Task-element ${status}`}>
         <div className='Task-element__info'>
@@ -30,7 +25,6 @@ function Task(props) {
                 </Button>
                 <Button className='btn btn--delete' >Delete 🗑️</Button>
             </div>
-
         </div>
         </li>
     );
