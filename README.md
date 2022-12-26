@@ -6,12 +6,12 @@ this Task is a part of my internship at <a href="https://www.foothillsolutions.c
 
 ## Features
 
-A. See existing todos.
-B. Add a new todo to the list.
-C. Search through the todos.
-D. Mark todo as done.
-E. A toggle to show/hide todos.
-F. Count of total todos and how many are done and remaining in the list footer.
+- See existing todos.
+- Add a new todo to the list.
+- Search through the todos.
+- Mark todo as done.
+- A toggle to show/hide todos.
+- Count of total todos and how many are done and remaining in the list footer.
 
 ## Installation
 
