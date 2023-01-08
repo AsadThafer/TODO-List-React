@@ -1,32 +1,55 @@
 import Navbar from './components/Navbar.js';
+import Task from './components/Tasks/Task.js';
 import AddTask from './components/Tasks/AddTask.js';
-import TasksList from './components/Tasks/TasksList.js';
-import { useState } from 'react';
 import './App.css';
-
-const DUMMY_TASKS = [
-];
-
 function App() {
-  const [tasks, setTasks] = useState(DUMMY_TASKS);
-  
+
   const AddTaskDataHandler = (enteredtask) => {
-    setTasks((prevTasks) => {
-      return [enteredtask, ...prevTasks];
-    });
+    const taskData = {
+      ...enteredtask,
+      id: Math.random().toString(),
+    };
+    console
+      .log (taskData);
   };
 
-  
-
   return (
-    <div  >
+    <div>
       <Navbar />
       <AddTask onAddTaskData = {AddTaskDataHandler} />
-      <TasksList className='Task-list' tasks={tasks} />
-      
+
+      <ul className='Task-list'>
+      <Task {...{
+        status: 'TO-DO',
+        title: 'Task 1',
+        Assignee: 'Asad Asad',
+      }}
+       />
+      <Task {...{
+        status: 'TO-DO',
+        title: 'Task 2',
+        Assignee: 'Asad Asad',
+      }}
+       />
+      <Task {...{
+        status: 'TO-DO',
+        title: 'Task 3',
+        Assignee: 'Asad Asad',
+      }}
+        />
+      <Task {...{
+        status: 'TO-DO',
+        title: 'Task 4',
+        Assignee: 'Asad Asad',
+      }}
+
+       />
+       </ul>
+
+
     </div>
  )
-  
+  ;
 }
 
 export default App;

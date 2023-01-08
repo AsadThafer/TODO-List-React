@@ -1,7 +1,6 @@
 import './AddTask.css';
 import React, { useState } from 'react';
 import Button from '../Button.js';
-// import TasksList from './TasksList';
 
 function AddTask(props) {
     const [title, setTitle] = useState('');
@@ -16,10 +15,11 @@ function AddTask(props) {
         setAssignee(event.target.value);
     };
 
-
+    const handleStatusChange = (event) => {
+        setStatus(event.target.value);
+    };
 
     const TaskData = {
-        id : Math.random().toString(),
         title: title,
         Assignee: Assignee,
         status: status,
@@ -29,13 +29,10 @@ function AddTask(props) {
     const handleSubmit = (event) => {
         event.preventDefault();
         props.onAddTaskData(TaskData);
+        setStatus('TO-DO');
         setTitle('');
         setAssignee('');
-        setStatus('TO-DO');
-
-
     };
-
         
 
 
@@ -53,6 +50,13 @@ function AddTask(props) {
                 value={Assignee}
                 onChange={handleAssigneeChange}
             />
+            <select
+                value={status}
+                onChange={handleStatusChange}
+            >
+                <option value='TO-DO'>TO-DO</option>
+                <option value='DONE'>DONE</option>
+            </select>
             
             
             <Button className='btn btn--add'
