@@ -2,11 +2,11 @@ import "./AddTask.css";
 import React, { useState } from "react";
 import Button from "../Button.js";
 // import TasksList from './TasksList';
-
+import statuses from "../../Constants.js";
 function AddTask(props) {
   const [title, setTitle] = useState("");
-  const [Assignee, setAssignee] = useState("");
-  const [status, setStatus] = useState("TO-DO"); //boolean    or 2 constants
+  const [assignee, setAssignee] = useState("");
+  const [status, setStatus] = useState(statuses.ToDoStatus); //boolean    or 2 constants
 
   const handleTitleChange = (event) => {
     setTitle(event.target.value);
@@ -16,22 +16,23 @@ function AddTask(props) {
     setAssignee(event.target.value);
   };
 
+  const cleanTaskData = () => {
+    setTitle("");
+    setAssignee("");
+    setStatus(statuses.ToDoStatus);
+  };
+
   const handleSubmit = (event) => {
-    const TaskData = {
+    const taskData = {
       id: Math.random().toString(),
       title: title,
-      Assignee: Assignee,
+      assignee: assignee,
       status: status,
     }; //short hand property
     event.preventDefault();
-    props.onAddTaskData(TaskData); //camel case
-    setTitle("");
-    setAssignee("");
-    setStatus("TO-DO");
-    //reseet state calll back
+    props.onAddTaskData(taskData); //camel case
+    cleanTaskData(); //reseet state calll back
   };
-
-  //reseet state function
 
   return (
     <form className="startAddTask" onSubmit={handleSubmit}>
@@ -44,7 +45,7 @@ function AddTask(props) {
       <input
         type="text"
         placeholder="Assignee"
-        value={Assignee}
+        value={assignee}
         onChange={handleAssigneeChange}
       />
 

@@ -7,9 +7,6 @@ function TaskCount(props) {
 
   const DoneTasks = props.tasks.filter((task) => task.status === "DONE").length;
 
-  
-  
-
   return (
     <div className="Task-count">
       <div className="TaskCount__element">

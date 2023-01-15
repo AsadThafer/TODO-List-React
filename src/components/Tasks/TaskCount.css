@@ -4,3 +4,19 @@
     margin-top: 10px;
     color: white;
   } */
+
+.Task-count {
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 10px;
+  color: white;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  align-content: space-between;
+  border: 2px solid white;
+  border-radius: 5px;
+  width: 40%;
+  margin: 0 auto;
+}

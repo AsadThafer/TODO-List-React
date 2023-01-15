@@ -7,14 +7,11 @@ import TaskCount from "./components/Tasks/TaskCount.js";
 
 import { useState } from "react";
 import "./App.css";
-const DUMMY_TASKS = [];
-const EmptySearch = "";
-const EmptyFilterStatus = "";
 
 function App() {
-  const [tasks, setTasks] = useState(DUMMY_TASKS);
-  const [searchTerm, setSearchTerm] = useState(EmptySearch);
-  const [FilterStatus, setFilterStatus] = useState(EmptyFilterStatus);
+  const [tasks, setTasks] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [FilterStatus, setFilterStatus] = useState("");
 
   const AddTaskDataHandler = (enteredtask) => {
     setTasks((prevTasks) => {
@@ -52,12 +49,13 @@ function App() {
           return task.id !== taskId;
         }),
       ];
-    })};
+    });
+  };
 
   //app -> taskslist callback
   //
   return (
-    <div>
+    <>
       <Navbar />
       <TasksSearch onSearchTermChange={searchTaskHandler} />
       <TasksToggle onStatusChange={TasksToggleHandler} />
@@ -71,7 +69,7 @@ function App() {
         FilterStatus={FilterStatus}
       />
       <TaskCount tasks={tasks} />
-    </div>
+    </>
   );
 }
 

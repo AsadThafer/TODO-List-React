@@ -1,11 +1,8 @@
 import "./TasksToggle.css";
-import React, { useState } from "react";
 
-function TasksToggle(props) {
-  const [FilterStatus, setFilteredStatus] = useState("");
+function TasksToggle({ onStatusChange, status }) {
   const handleStatusChange = (event) => {
-    setFilteredStatus(event.target.value);
-    props.onStatusChange(event.target.value);
+    onStatusChange(event.target.value);
   };
 
   return (
@@ -15,7 +12,7 @@ function TasksToggle(props) {
       </label>
       <select
         className="StatusSelect"
-        value={FilterStatus}
+        value={status}
         onChange={handleStatusChange}
       >
         <option value="">All</option>

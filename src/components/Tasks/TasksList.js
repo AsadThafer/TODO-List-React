@@ -1,10 +1,13 @@
 import Task from "./Task.js";
-function TasksList(props) {
-  const Tasks = props.tasks;
-  const searchTerm = props.searchTerm;
-  const FilterStatus = props.FilterStatus;
-
-  const filteredTasks = props.tasks.filter((task) => {
+import "./TasksList.css";
+function TasksList({
+  tasks,
+  searchTerm,
+  FilterStatus,
+  onTaskUpdate,
+  onDeleteTask,
+}) {
+  const filteredTasks = tasks.filter((task) => {
     return task.title.includes(searchTerm);
   });
 
@@ -14,16 +17,16 @@ function TasksList(props) {
 
   const updateTaskHandler = (status, taskId) => {
     console.log(status, taskId);
-    props.onTaskUpdate(status, taskId);
+    onTaskUpdate(status, taskId);
   };
 
   const TaskDeleteHandler = (taskId) => {
     console.log(taskId);
-    Tasks.splice(
-      Tasks.findIndex((task) => task.id === taskId),
+    tasks.splice(
+      tasks.findIndex((task) => task.id === taskId),
       1
     );
-    props.onDeleteTask(taskId);
+    onDeleteTask(taskId);
   };
 
   if (filteredTasksByStatus.length === 0) {
@@ -46,7 +49,6 @@ function TasksList(props) {
           />
         ))}
       </ul>
-      
     </div>
   );
 }

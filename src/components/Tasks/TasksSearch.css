@@ -1,6 +1,20 @@
-.TasksSearch{
-    margin: 0 auto;
-    margin-bottom: 20px;
-    padding: 10px;
-    text-align: center;
+.TasksSearch {
+  margin: 0 auto;
+  margin-bottom: 20px;
+  padding: 10px;
+  text-align: center;
+}
+
+.Searchinfo {
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 10px;
+  color: white;
+}
+
+#search {
+  background-color: whitesmoke;
+  border: 2px solid white;
+  border-radius: 5px;
+  width: 10%;
 }

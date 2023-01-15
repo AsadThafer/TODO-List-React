@@ -1,12 +1,9 @@
 import "./TasksSearch.css";
 import React, { useState } from "react";
 
-function TasksSearch(props) {
-  const [searchTerm, setSearchTerm] = useState("");
-
+function TasksSearch({ onSearchTermChange, searchTerm }) {
   const handleSearchTermChange = (event) => {
-    setSearchTerm(event.target.value);
-    props.onSearchTermChange(event.target.value);
+    onSearchTermChange(event.target.value);
   };
 
   return (
@@ -15,6 +12,8 @@ function TasksSearch(props) {
         Search for a task :{" "}
       </label>
       <input
+        id="search"
+        name="search"
         type="text"
         placeholder="Search for a task"
         value={searchTerm}
