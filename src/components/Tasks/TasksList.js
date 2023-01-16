@@ -22,7 +22,7 @@ function TasksList({
 
   const TaskDeleteHandler = (taskId) => {
     console.log(taskId);
-    tasks.splice(
+    tasks.slice(
       tasks.findIndex((task) => task.id === taskId),
       1
     );
