@@ -1,5 +1,4 @@
 import "./TasksSearch.css";
-import React, { useState } from "react";
 
 function TasksSearch({ onSearchTermChange, searchTerm }) {
   const handleSearchTermChange = (event) => {
