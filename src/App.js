@@ -11,9 +11,9 @@ import "./App.css";
 function App() {
   const [tasks, setTasks] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
-  const [FilterStatus, setFilterStatus] = useState("");
+  const [filterStatus, setFilterStatus] = useState("");
 
-  const AddTaskDataHandler = (enteredtask) => {
+  const addTaskDataHandler = (enteredtask) => {
     setTasks((prevTasks) => {
       return [...prevTasks, enteredtask];
     });
@@ -25,8 +25,8 @@ function App() {
     console.log(searchTerm);
   };
 
-  const TasksToggleHandler = (FilterStatus) => {
-    setFilterStatus(FilterStatus);
+  const tasksToggleHandler = (filterStatus) => {
+    setFilterStatus(filterStatus);
   };
 
   const updateTaskHandler = (status, taskId) => {
@@ -58,15 +58,15 @@ function App() {
     <>
       <Navbar />
       <TasksSearch onSearchTermChange={searchTaskHandler} />
-      <TasksToggle onStatusChange={TasksToggleHandler} />
-      <AddTask onAddTaskData={AddTaskDataHandler} />
+      <TasksToggle onStatusChange={tasksToggleHandler} />
+      <AddTask onAddTaskData={addTaskDataHandler} />
       <TasksList
         onTaskUpdate={updateTaskHandler}
         onDeleteTask={deleteTaskHandler}
         className="Task-list"
         tasks={tasks}
         searchTerm={searchTerm}
-        FilterStatus={FilterStatus}
+        FilterStatus={filterStatus}
       />
       <TaskCount tasks={tasks} />
     </>

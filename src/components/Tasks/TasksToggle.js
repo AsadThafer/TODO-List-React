@@ -1,4 +1,5 @@
 import "./TasksToggle.css";
+import { statuses } from "../../Constants.js";
 
 function TasksToggle({ onStatusChange, status }) {
   const handleStatusChange = (event) => {
@@ -16,8 +17,8 @@ function TasksToggle({ onStatusChange, status }) {
         onChange={handleStatusChange}
       >
         <option value="">All</option>
-        <option value="TO-DO">TO-DO</option>
-        <option value="DONE">DONE</option>
+        <option value={statuses.ToDoStatus}>{statuses.ToDoStatus}</option>
+        <option value={statuses.DoneStatus}>{statuses.DoneStatus}</option>
       </select>
     </div>
   );

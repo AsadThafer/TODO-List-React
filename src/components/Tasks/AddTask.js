@@ -2,7 +2,7 @@ import "./AddTask.css";
 import React, { useState } from "react";
 import Button from "../Button.js";
 // import TasksList from './TasksList';
-import statuses from "../../Constants.js";
+import { statuses } from "../../Constants.js";
 function AddTask(props) {
   const [title, setTitle] = useState("");
   const [assignee, setAssignee] = useState("");

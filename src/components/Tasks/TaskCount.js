@@ -1,11 +1,14 @@
 import "./TaskCount.css";
+import { statuses } from "../../Constants";
 
 function TaskCount(props) {
   const ToDoTasks = props.tasks.filter(
-    (task) => task.status === "TO-DO"
+    (task) => task.status === statuses.ToDoStatus
   ).length;
 
-  const DoneTasks = props.tasks.filter((task) => task.status === "DONE").length;
+  const DoneTasks = props.tasks.filter(
+    (task) => task.status === statuses.DoneStatus
+  ).length;
 
   return (
     <div className="Task-count">

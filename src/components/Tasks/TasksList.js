@@ -20,12 +20,7 @@ function TasksList({
     onTaskUpdate(status, taskId);
   };
 
-  const TaskDeleteHandler = (taskId) => {
-    console.log(taskId);
-    tasks.slice(
-      tasks.findIndex((task) => task.id === taskId),
-      1
-    );
+  const taskDeleteHandler = (taskId) => {
     onDeleteTask(taskId);
   };
 
@@ -42,7 +37,7 @@ function TasksList({
       <ul className="Task-list">
         {filteredTasksByStatus.map((task) => (
           <Task
-            onDeleteTask={TaskDeleteHandler}
+            onDeleteTask={taskDeleteHandler}
             onUpdateTaskStatus={updateTaskHandler}
             task={task}
             key={task.id}
